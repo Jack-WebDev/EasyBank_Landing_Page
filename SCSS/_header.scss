@@ -1,0 +1,175 @@
+
+header {
+    padding: 2em;
+    background: #fff;
+    height: 15vh;
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .hamburger {
+            cursor: pointer;
+
+            .bar {
+                display: block;
+                width: 35px;
+                height: 2px;
+                margin: 5px 0;
+                background-color: #000;
+            }
+        }
+
+        .navMenu {
+            width: 100%;
+            display: block;
+            margin-top: 1em;
+            padding: 1em 0;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            transform: translateX(-200%);
+            transition: transform 500ms ease;
+            z-index: 1;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+
+            .nav__item {
+                cursor: pointer;
+                font-size: 18px;
+                line-height: 2;
+            }
+            .nav__item:hover {
+                text-decoration: 2px underline var(--LimeGreen);
+            }
+        }
+
+
+        .btn-head {
+            display: none;
+        }
+    }
+}
+
+header .navbar .navMenu.active {
+    transform: translateX(0);
+}
+header .navbar .hamburger.active {
+
+    .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .bar:nth-child(1) {
+        transform: rotate(-45deg) translateY(10px);
+    }
+    .bar:nth-child(3) {
+        transform: rotate(45deg) translateY(-10px);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        padding: 2em 4em;
+    
+        .navbar {
+            flex-wrap: nowrap;
+    
+            .hamburger {
+                display: none;
+                cursor: pointer;
+    
+                .bar {
+                    display: block;
+                    width: 35px;
+                    height: 2px;
+                    margin: 5px 0;
+                    background-color: #000;
+                }
+            }
+    
+            .navMenu {
+                width: auto;
+                display: flex;
+                margin-top: 0;
+                padding: 0;
+                text-align: center;
+                background-color: unset;
+                transform: unset;
+                gap: 10px;
+                box-shadow: none;
+    
+                .nav__item {
+                    font-size: 18px;
+                    line-height: 2;
+                }
+                .nav__item:hover {
+                    border-bottom: 2px solid var(--LimeGreen);
+                    text-decoration: none;
+                }
+            }
+    
+    
+            .btn-head {
+                display: inline-block;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 3em;
+                color: #fff;
+                font-size: 18px;
+                background-image: linear-gradient(to right, var(--LimeGreen), var(--BrightCyan));
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    header {
+        padding: 2em 4em;
+    
+        .navbar {
+            flex-wrap: nowrap;
+    
+            .hamburger {
+                display: none;
+                cursor: pointer;
+    
+                .bar {
+                    display: block;
+                    width: 35px;
+                    height: 2px;
+                    margin: 5px 0;
+                    background-color: #000;
+                }
+            }
+    
+            .navMenu {
+                width: auto;
+                display: flex;
+                margin-top: 0;
+                padding: 0;
+                text-align: center;
+                background-color: unset;
+                transform: unset;
+                gap: 20px;
+    
+                .nav__item {
+                    font-size: 18px;
+                    line-height: 2;
+                }
+            }
+    
+    
+            .btn-head {
+                display: inline-block;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 3em;
+                color: #fff;
+                font-size: 18px;
+                background-image: linear-gradient(to right, var(--LimeGreen), var(--BrightCyan));
+            }
+        }
+    }  
+}
