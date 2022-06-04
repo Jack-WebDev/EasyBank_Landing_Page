@@ -599,7 +599,6 @@ footer {
 }
 footer .foot-head .foot_logo {
   padding-bottom: 2em;
-  filter: invert(1);
 }
 footer .foot-head .socials img {
   margin: 0 5px;
@@ -646,7 +645,6 @@ footer .btn p {
   }
   footer .foot-head .foot_logo {
     padding-bottom: 2em;
-    filter: invert(1);
   }
   footer .foot-head .socials img {
     margin: 0 5px;
@@ -687,7 +685,6 @@ footer .btn p {
   footer .foot-head .foot_logo {
     width: 60%;
     padding-bottom: 2em;
-    filter: invert(1);
   }
   footer .foot-head .socials img {
     margin: 0 5px;
